@@ -1,5 +1,3 @@
 import { Client } from 'faunadb'
 
-const fauna = new Client({ secret: process.env.FAUNADB_KEY })
-
-export { fauna }
+export const fauna = new Client({ secret: process.env.FAUNADB_KEY, domain: 'db.us.fauna.com', scheme: 'https' })
